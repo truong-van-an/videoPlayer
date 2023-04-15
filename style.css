@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 800px;
+}
+.container video{
+    width: 100%;
+}
+.container.full{
+    max-width: 100%;
+    width: 100%;
+}
+.wrapper{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+}
+.video-timeline{
+    position: relative;
+    width: 100%;
+    padding: 10px 0px;
+}
+.timeline-bar{
+    position: relative;
+    height: 5px;
+    background: rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+.timeline-bar, .controls-left, .video-time{
+    display: flex;
+    align-items: center;
+}
+.timeline-bar span{
+    position: absolute;
+    color: #fff;
+    left: 0;
+    top: -20px;
+    display: none;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+.timeline-bar:hover span{
+    display: block;
+    pointer-events: visible;
+}
+.progress{
+    background: rgb(255,0,0);
+    width: 0%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: 0.1s ease;
+}
+.progress::before{
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: rgba(255,255,255);
+    border-radius: 50%;
+    right: -5px;
+    transform-origin: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.timeline-bar:hover .progress{
+    height: 7px;
+    cursor: pointer;
+}
+.timeline-bar:hover .progress::before{
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    transform-origin: center;
+    opacity: 1;
+    pointer-events: visible;
+}
+.video-controls{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 15px 0px;
+}
+.controls-left{
+    position: relative;
+}
+.controls-left button{
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0px 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.controls-left .volume{
+    padding-right: 5px;
+}
+.controls-left input{
+    height: 5px;
+    width: 70px;
+}
+.video-time{
+    color: #fff;
+    padding: 0px 10px;
+}
+.box-setting.show{
+    display: block;
+}
+.box-setting{
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    top: -120px;
+    color: #fff;
+    right: 10px;
+    display: none;
+    z-index: 10000;
+    border-radius: 10px;
+}
+.box-setting ul{
+    position: relative;
+    list-style: none;
+    width: 250px;
+}
+.box-setting ul li{
+    display: flex;
+    justify-content: space-between;
+}
+.box-setting ul .setting-item{
+    align-items: center;
+    padding: 10px 10px;
+}
+.setting-item i{
+    padding: 0px 10px;
+}
+.box-setting ul .setting-item .note{
+    display: flex;
+    align-items: center;
+}
+.setting-item .note svg{
+    width: 35px;
+}
+ul li .note p{
+    padding: 0px 10px;
+}
+ul li .toggle{
+    position: relative;
+    width: 36px;
+    height: 15px;
+    background: rgb(245,0,0);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* transition: 0.65s ease-in-out; */
+}
+.toggle.active{
+    background: rgb(139, 139, 139);
+}
+.toggle.active > .crile{
+    right: 18px;
+    background: #aeaeae;
+}
+ul li .toggle .crile{
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0px 0px 10px rgb(29, 29, 29,0.8);
+}
+.btnNote{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.btnNote i{
+    padding: 0px 4px;
+}
+.controls-right{
+    padding: 0px 10px;
+}
+.controls-right button{
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0px 15px;
+    font-size: 22px;
+    cursor: pointer;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="video-timeline">
+                <div class="timeline-bar">
+                    <span>00:00</span>
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <ul class="video-controls">
+                <li class="controls-left">
+                    <button class="backward"><i class="fa-solid fa-backward"></i></button>
+                    <button class="play-pause"><i class="fa-solid fa-play"></i></button>
+                    <button class="forward"><i class="fa-solid fa-forward"></i></button>
+                    <button class="volume"><i class="fa-solid fa-volume-high"></i></button>
+                    <input type="range" min="0" max="1" step="any">
+                    <div class="video-time">
+                        <p class="currentTime">00:00</p>
+                        <p class="separator">/</p>
+                        <p class="duration">00:00</p>
+                    </div>
+                </li>
+                <li class="controls-right">
+                    <button class="setting"><i class="fa-solid fa-gear"></i></button>
+                    <button class="fullscreen"><i class="fa-solid fa-expand"></i></button>
+                    <div class="box-setting">
+                        <ul>
+                            <li class="setting-item">
+                                <div class="note">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                    <p>Chú thích</p>
+                                </div>
+                                <div class="toggle">
+                                    <div class="crile"></div>
+                                </div>
+                            </li>
+                            <li class="setting-item">
+                                <div class="note">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.1" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+                                    </svg>                                      
+                                    <p>Tốc độ phát</p>
+                                </div>
+                                <div class="btnNote">
+                                    Chuẩn
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <video src="trailer.mp4"></video>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
